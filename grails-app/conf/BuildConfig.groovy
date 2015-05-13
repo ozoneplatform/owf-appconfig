@@ -22,7 +22,7 @@ grails.project.dependency.resolution = {
         grailsPlugins()
         grailsHome()
         mavenLocal()
-        mavenRepo "https://www.owfgoss.org/nexus/content/groups/public"
+        mavenRepo 'http://maven.restlet.org'
         grailsCentral()
         mavenCentral()
     }
