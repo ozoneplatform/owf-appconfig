@@ -1,16 +1,16 @@
 package org.ozoneplatform.appconfig.client.controller
 
 import grails.validation.ValidationException
-import org.ozoneplatform.appconfig.server.domain.model.ApplicationConfiguration
-import org.ozoneplatform.appconfig.validate.ConfigurationValidator
 import org.ozoneplatform.appconfig.event.ConfigurationSaveFailedEvent
+import org.ozoneplatform.appconfig.server.domain.model.ApplicationConfiguration
 import org.ozoneplatform.appconfig.server.service.api.ApplicationConfigurationService
+import org.ozoneplatform.appconfig.validate.ConfigurationValidator
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Qualifier
-import org.springframework.context.MessageSource
-import org.springframework.stereotype.Component
 import org.springframework.context.ApplicationEventPublisher
 import org.springframework.context.ApplicationEventPublisherAware
+import org.springframework.context.MessageSource
+import org.springframework.stereotype.Component
 
 @Component
 abstract class AbstractApplicationConfigurationController implements ApplicationEventPublisherAware {
