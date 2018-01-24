@@ -1,15 +1,15 @@
 package org.ozoneplatform.appconfig.server.service.impl
 
 import org.ozoneplatform.appconfig.event.ConfigurationSaveEvent
-import org.springframework.transaction.annotation.Transactional
 import org.ozoneplatform.appconfig.server.domain.model.ApplicationConfiguration
 import org.ozoneplatform.appconfig.server.domain.model.ApplicationSetting
-import org.springframework.stereotype.Component
-import org.springframework.beans.factory.annotation.Autowired
 import org.ozoneplatform.appconfig.server.persistence.api.ApplicationConfigurationRepository
 import org.ozoneplatform.appconfig.server.service.api.ApplicationConfigurationService
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.ApplicationEventPublisher
 import org.springframework.context.ApplicationEventPublisherAware
+import org.springframework.stereotype.Component
+import org.springframework.transaction.annotation.Transactional
 
 @Component
 class ApplicationConfigurationServiceImpl implements ApplicationConfigurationService, ApplicationEventPublisherAware {
@@ -60,7 +60,7 @@ class ApplicationConfigurationServiceImpl implements ApplicationConfigurationSer
     //This method is used to evaluate boolean configuration settings
     @Transactional(readOnly=true)
     public boolean is(ApplicationSetting setting){
-        getApplicationConfiguration(setting)?.value ? getApplicationConfiguration(setting)?.value.toBoolean() : false
+        getApplicationConfiguration(setting)?.value?.toBoolean() ?: false
     }
 
     //This method is used to evaluate string configuration settings
