@@ -17,7 +17,7 @@ define([
     return Backbone.View.extend({
         
         _defaultImage: function(){
-            return "../themes/common/images/agency/agencyDefault.png";
+            return "../static/themes/common/images/agency/agencyDefault.png";
         },
 
         //Use value from input to update model and reset the form
