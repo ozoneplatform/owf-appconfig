@@ -1,16 +1,13 @@
 package org.ozoneplatform.appconfig.server.persistence.impl
 
-import java.util.List;
-
-import org.hibernate.Criteria;
-import org.hibernate.SessionFactory;
+import org.hibernate.Criteria
+import org.hibernate.SessionFactory
+import org.hibernate.criterion.Order
+import org.hibernate.criterion.Restrictions
 import org.ozoneplatform.appconfig.server.domain.model.ApplicationConfiguration
 import org.ozoneplatform.appconfig.server.persistence.api.ApplicationConfigurationRepository
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Repository
-import org.hibernate.criterion.Restrictions;
-import org.hibernate.Criteria
-import org.hibernate.criterion.Order
 
 @Repository
 class ApplicationConfigurationHibernateRepositoryImpl<T> implements ApplicationConfigurationRepository{
